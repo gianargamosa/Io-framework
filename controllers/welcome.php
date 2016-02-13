@@ -7,12 +7,11 @@ class Welcome extends Controller{
 	}
 
 	public function index(){
-
-		$data['title'] = 'Welcome';
-
-		$this->_view->rendertemplate('header',$data);
-		$this->_view->render('welcome/welcome',$data);
-		$this->_view->rendertemplate('footer',$data);
+		Arc::get('/', function() {
+  			$this->_view->rendertemplate('header',$data);
+			$this->_view->render('welcome/welcome',$data);
+			$this->_view->rendertemplate('footer',$data);
+		});
+		Arc::dispatch();
 	}
-	
 }

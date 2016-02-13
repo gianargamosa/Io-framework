@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-define('DIR','http://localhost/io/');
+define('DIR','http://localhost/Io-framework/');
 define('DOCROOT', dirname(__FILE__));
 
 define('DB_TYPE','mysql');
@@ -23,7 +23,6 @@ function __autoload($class) {
    } 
  
 }
-
 set_exception_handler('logger::exception_handler');
 set_error_handler('logger::error_handler');
 
